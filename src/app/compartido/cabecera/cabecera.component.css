@@ -1,0 +1,115 @@
+/* Estilos para el MegaMenu */
+.custom-megamenu {
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 4;
+    border: 2px solid blue;
+    padding: 1rem;
+    background-color: var(--surface-0);
+}
+
+/* Estilo para el logo */
+.menu-logo {
+    margin-right: 2.5rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.menu-logo img {
+    max-width: 20vw; /* El 20% del ancho de la pantalla */
+    height: auto;
+}
+
+
+/* Estilos de los botones del menú */
+.menu-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Estilos para los ítems del menú */
+.menu-items {
+    display: flex;
+    justify-content: center ;
+    margin-top: 1rem;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 12px 32px;
+    font-weight: 600;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    margin: 0 1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.menu-item:hover {
+    background-color: rgba(0, 0, 255, 0.1);
+    transform: scale(1.05);
+}
+/* Estilos base para el p-tieredmenu */
+.p-tieredmenu {
+    width: 200px; /* Ancho del menú */
+    border: 1px solid #ccc; /* Borde */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    position: absolute; /* Posición absoluta */
+    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+  }
+  
+  .p-tieredmenu .p-menuitem-link {
+    padding: 10px 15px; /* Espaciado interno */
+    color: #333; /* Color del texto */
+    display: block; /* Asegura que los elementos se muestren en bloque */
+  }
+  
+  .p-tieredmenu .p-menuitem-link:hover {
+    background-color: #f5f5f5; /* Fondo al pasar el mouse */
+  }
+  
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 700px) {
+    .p-tieredmenu {
+      width: 100%; /* Ocupa todo el ancho en móviles */
+      position: fixed; /* Posición fija en móviles */
+      top: 10%; /* Lo coloca en la parte superior */
+      left: 50%; /* Centra horizontalmente */
+      transform: translateX(-50%); /* Ajusta el centrado */
+      z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    }
+  }
+
+  /* Estilos base para el p-tieredmenu */
+.p-tieredmenu {
+    width: 200px; /* Ancho del menú */
+    border: 1px solid #ccc; /* Borde */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    position: absolute; /* Posición absoluta */
+    z-index: 1002; /* Asegura que el menú esté por encima de otros elementos */
+  }
+  
+  .p-tieredmenu .p-menuitem-link {
+    padding: 10px 15px; /* Espaciado interno */
+    color: #333; /* Color del texto */
+    display: block; /* Asegura que los elementos se muestren en bloque */
+  }
+  
+  .p-tieredmenu .p-menuitem-link:hover {
+    background-color: #f5f5f5; /* Fondo al pasar el mouse */
+  }
+  
+
+  
+    
+  
+    /* Estilos para dispositivos móviles */
+
+  

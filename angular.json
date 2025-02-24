@@ -27,7 +27,11 @@
               }
             ],
             "styles": [
+              "https://unpkg.com/primeng@19.0.6/resources/themes/lara-light-blue/theme.css",
+              "https://unpkg.com/primeng@19.0.6/resources/primeng.min.css",
+              "https://unpkg.com/primeicons@7.0.0/primeicons.css",
               "src/styles.css"
+              
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -97,5 +101,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "5d3477c8-02c6-4d99-9ba7-766dd0d677c8"
   }
 }

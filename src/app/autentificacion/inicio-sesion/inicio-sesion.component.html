@@ -1,0 +1,21 @@
+<p-dialog header="Iniciar Sesión" [modal]="true" [(visible)]="visible" class="custom-dialog">
+    
+
+    <div class="form-container">
+        <p-floatlabel>
+            <input id="login-email" pInputText [(ngModel)]="email" class="w-full" autocomplete="off" />
+            <label for="login-email">Email</label>
+        </p-floatlabel>
+
+        <p-floatlabel>
+            <input id="login-password" pInputText type="password" [(ngModel)]="password" class="w-full" autocomplete="off" />
+            <label for="login-password">Contraseña</label>
+        </p-floatlabel>
+    </div>
+
+    <div class="button-container">
+        <p-button label="Cancelar" severity="info" (click)="close()" />
+        <p-button label="Ingresar" severity="info" (click)="close()" />
+    </div>
+</p-dialog>
+

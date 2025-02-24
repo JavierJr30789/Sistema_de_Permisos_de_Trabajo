@@ -1,0 +1,22 @@
+h1 {
+    text-align: center;
+    padding-top: 10%;
+  }
+  
+
+ 
+.boton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Opcional si necesitas que ocupe todo el ancho */
+  margin-bottom: 16px;
+}
+
+.custom-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #007bff;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}

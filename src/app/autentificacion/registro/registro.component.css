@@ -1,0 +1,45 @@
+.custom-dialog {
+    width: 25rem !important;
+}
+
+::ng-deep .p-dialog .p-dialog-header {
+    padding: 6px 20px; /* Ajusta el padding interno */
+    min-height: 20px; /* Aumenta la altura del header si es necesario */
+    
+}
+
+
+
+
+
+
+::ng-deep p-floatlabel {
+    margin-bottom: 8px; /* Espacio entre los inputs */
+    display: block;
+    width: 100%;
+}
+
+::ng-deep .p-dialog-content {
+    padding: 20px; /* Ajusta el padding del modal */
+}
+
+::ng-deep .p-button {
+    margin-right: 8px; /* Espacio entre botones */
+}
+
+::ng-deep .p-button:last-child {
+    margin-right: 0; /* El último botón no debe tener margen extra */
+}
+
+::ng-deep .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Espaciado uniforme entre elementos del formulario */
+}
+
+::ng-deep .button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 4px; /* Espaciado entre los botones */
+    margin-top: 10px; /* Espaciado con los inputs */
+}
