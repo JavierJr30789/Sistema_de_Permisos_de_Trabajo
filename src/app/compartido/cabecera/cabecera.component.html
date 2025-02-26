@@ -4,38 +4,34 @@
         class="custom-megamenu">
         
         <!-- LOGO -->
+         
         <ng-template #start>
+            <a href="">
             <div *ngIf="!isMobile" class="menu-logo">
                 <img src="https://cdn.freelogovectors.net/wp-content/uploads/2020/09/phoenix-global-resources-logo.png" 
                      alt="Mi Logo" width="100" height="auto">
-            </div>
+            </div></a>
         </ng-template>
 
-        <!-- BOTONES DE ACCIÓN -->
-        <ng-template #end>
-            <div class="menu-buttons"> 
-                <p-button *ngIf="!isMobile" label="Iniciar Sesión" variant="text" [raised]="true" severity="info" (click)="abrirDialogo('login')"></p-button>
-                <p-button *ngIf="!isMobile" label="Registrarse" variant="text" [raised]="true" severity="info" (click)="abrirDialogo('register')"></p-button>
-               
-                <div class="card flex justify-center" style="position: relative;">
-                    <p-button *ngIf="isMobile" label="Usuario" (click)="menu.toggle($event)"></p-button>
-                    <p-tieredmenu  #menu [model]="menuItems" [popup]="true" appendTo="body"></p-tieredmenu>
-                </div>
-                
-                <!-- Componente de diálogos -->
-                <app-inicio-sesion #loginDialog></app-inicio-sesion>
-                <app-registro #registerDialog></app-registro>
-            </div>
-        </ng-template>
-    </p-megamenu>
 
-    <!-- MENÚ PRINCIPAL (se coloca después del megamenú) -->
-    <div class="menu-items">
-        <ng-template #item let-item>
-            <a *ngIf="item.root" pRipple class="menu-item">
-                <i [ngClass]="item.icon"></i>
-                <span class="ml-2">{{ item.label }}</span>
-            </a>
-        </ng-template>
+     <!-- BOTONES DE ACCIÓN -->
+<ng-template #end>
+    <div class="menu-buttons">
+        <p-button *ngIf="!isMobile" label="Iniciar Sesión" variant="text" [raised]="true" severity="info" (click)="abrirDialogo('login')"></p-button>
+        <p-button *ngIf="!isMobile" label="Registrarse" variant="text" [raised]="true" severity="info" (click)="abrirDialogo('register')"></p-button>
+        
+        <!-- Botón combinado para móviles -->
+        <p-button *ngIf="isMobile" label="Acceder" icon="pi pi-user" variant="text" [raised]="true" severity="info" (click)="confirmarAccion()"></p-button>
+
+        <!-- Componente de diálogos -->
+        <app-inicio-sesion #loginDialog></app-inicio-sesion>
+        <app-registro #registerDialog></app-registro>
     </div>
+</ng-template>
+
+    </p-megamenu>
+ <!-- Confirm Dialog y Toast -->
+ <p-confirmDialog></p-confirmDialog>
+ <p-toast></p-toast>
+   
 </div>

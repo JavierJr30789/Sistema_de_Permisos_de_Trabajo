@@ -1,0 +1,24 @@
+h1 {
+    text-align: center;
+    padding-top: 10%;
+  }
+  
+ 
+  
+  .big-icon-button .material-icons {
+    font-size: 3rem; /* Tamaño grande del icono */
+    display: block; /* Para que esté encima del texto */
+    text-align: center;
+}
+
+.boton-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.boton {
+    display: flex;
+}
+

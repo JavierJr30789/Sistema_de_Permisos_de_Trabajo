@@ -1,63 +1,45 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MegaMenuItem, MenuItem } from 'primeng/api';
+import { MegaMenuItem } from 'primeng/api';
 import { MegaMenu } from 'primeng/megamenu';
 import { ButtonModule } from 'primeng/button';
 import { CommonModule } from '@angular/common';
-import { BreakpointObserver } from '@angular/cdk/layout';
+import { RouterModule } from '@angular/router';
 import { InicioSesionComponent } from '../../autentificacion/inicio-sesion/inicio-sesion.component';
 import { RegistroComponent } from '../../autentificacion/registro/registro.component';
-import { SplitButtonModule } from 'primeng/splitbutton';
-import { TieredMenuModule } from 'primeng/tieredmenu';
+import { ConfirmationService, MessageService } from 'primeng/api';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ToastModule } from 'primeng/toast';
+
+
+
 
 @Component({
   selector: 'app-cabecera',
   templateUrl: './cabecera.component.html',
   standalone: true,
-  imports: [
-    MegaMenu,
-    ButtonModule,
-    CommonModule,
-    InicioSesionComponent,
-    RegistroComponent,
-    SplitButtonModule,
-    TieredMenuModule,
-  ],
+  imports: [MegaMenu, ButtonModule, CommonModule, RouterModule, ConfirmDialogModule, ToastModule, InicioSesionComponent, RegistroComponent],
+  providers: [ConfirmationService, MessageService, RouterModule]
 })
 export class CabeceraComponent implements OnInit {
-  items: MegaMenuItem[] | undefined;
-  menuItems: MenuItem[] = []; // Modelo para el p-tieredmenu
-
+  items: MegaMenuItem[] = [];
   isMobile = false;
 
   @ViewChild('loginDialog') loginDialog!: InicioSesionComponent;
   @ViewChild('registerDialog') registerDialog!: RegistroComponent;
 
-  constructor(private breakpointObserver: BreakpointObserver) {
+  constructor(private confirmationService: ConfirmationService, private breakpointObserver: BreakpointObserver) {
     this.breakpointObserver.observe(['(max-width: 700px)']).subscribe((result) => {
       this.isMobile = result.matches;
     });
   }
 
   ngOnInit() {
-    // Modelo para el MegaMenu
     this.items = [
-      { label: 'Modo offline', root: true },
-      { label: 'Preguntas Frecuentes', root: true },
-      { label: 'Contacto', root: true },
-    ];
-
-    // Modelo para el TieredMenu
-    this.menuItems = [
-      {
-        label: 'Iniciar Sesión',
-        icon: 'pi pi-sign-in',
-        command: () => this.abrirDialogo('login'),
-      },
-      {
-        label: 'Registrarse',
-        icon: 'pi pi-user-plus',
-        command: () => this.abrirDialogo('register'),
-      },
+      { label: 'Inicio', icon: 'pi pi-home', routerLink: '/' },
+      { label: 'Modo offline', icon: 'pi pi-wifi', routerLink: '/' },
+      { label: 'Preguntas Frecuentes', icon: 'pi pi-question', routerLink: '/' },
+      { label: 'Contacto', icon: 'pi pi-comments', routerLink: '/' },
     ];
   }
 
@@ -67,5 +49,17 @@ export class CabeceraComponent implements OnInit {
     } else if (tipo === 'register') {
       this.registerDialog.show();
     }
+  }
+
+  confirmarAccion() {
+    this.confirmationService.confirm({
+      icon: 'pi pi-question-circle',
+      header: 'Ya tienes una cuenta?',
+      message: 'Elige una opción para continuar.',
+      acceptLabel: 'No tengo una cuenta',
+      rejectLabel: 'SI tengo una cuenta',
+      accept: () => this.abrirDialogo('register'),
+      reject: () => this.abrirDialogo('login'),
+    });
   }
 }
