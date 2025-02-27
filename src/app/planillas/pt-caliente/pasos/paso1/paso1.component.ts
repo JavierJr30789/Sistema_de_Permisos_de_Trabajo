@@ -15,21 +15,19 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { PanelModule } from 'primeng/panel';
 import { FloatLabelModule } from 'primeng/floatlabel';
-import { ToolbarComponent } from './toolbar/toolbar.component';
-import { Paso1Component } from './pasos/paso1/paso1.component';
+
 
 
 
 
 @Component({
-  selector: 'app-pt-caliente',
+  selector: 'app-paso1',
   standalone: true,
-  imports: [FormsModule, CardModule,DatePickerModule,PanelModule,ToolbarComponent,Paso1Component, FloatLabelModule ,ReactiveFormsModule,RouterModule, FieldsetModule, InputTextModule, CalendarModule, RadioButtonModule, CheckboxModule, ButtonModule, DividerModule],
-  templateUrl: './pt-caliente.component.html',
-  styleUrl: './pt-caliente.component.css'
+  imports: [FormsModule, CardModule,DatePickerModule,PanelModule, FloatLabelModule ,ReactiveFormsModule,RouterModule, FieldsetModule, InputTextModule, CalendarModule, RadioButtonModule, CheckboxModule, ButtonModule, DividerModule],
+  templateUrl: './paso1.component.html',
+  styleUrl: './paso1.component.css'
 })
-export class PtCalienteComponent {
-  fecha!: Date; // Propiedad para el p-calendar
+export class Paso1Component {
 
   datetime12h: Date[] | undefined;
 
@@ -39,9 +37,6 @@ export class PtCalienteComponent {
 
   value2: string = '';
 
-  constructor() {
-    this.fecha = new Date(); // Asigna la fecha y hora actual
-  }
 
   form = {
     yacimiento: '',
@@ -59,3 +54,4 @@ export class PtCalienteComponent {
     dni: ''
   };
 }
+

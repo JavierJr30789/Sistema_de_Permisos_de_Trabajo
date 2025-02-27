@@ -1,0 +1,228 @@
+
+p-divider {
+    height: 30px;
+    margin: 0 1rem;
+  }
+  
+  
+  /* Ajustes generales */
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  /* Asegurar que los float labels y calendarios sean más compactos */
+  p-floatlabel, 
+  p-calendar {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  /* Ajusta los checkbox en la misma fila */
+  .flex-row {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  /* Ajusta el ancho del textarea */
+  .textarea-full {
+    width: 100%;
+    height: 120px;
+    resize: none;
+  }
+  
+  
+  
+  
+  
+  /* Espaciado en los dividers */
+  p-divider {
+    margin: 1rem 0;
+  }
+  .form-container {
+    display: flex; /* Activa flexbox */
+    flex-direction: row; /* Coloca las secciones en una fila (es el valor por defecto) */
+    justify-content: space-between; /* Espacia las secciones uniformemente */
+    gap: 10px; /* Espacio entre secciones */
+  }
+  
+  .section {
+    flex: 1; /* Hace que cada sección ocupe el mismo espacio */
+    display: flex;
+    flex-direction: column; /* Apila los elementos dentro de cada sección */
+    gap: 15px; /* Espacio entre los elementos internos de cada sección */
+  }
+  
+  .textarea-full {
+    width: 100%; /* Asegura que el textarea ocupe todo el ancho de su contenedor */
+  }
+  
+  .grid {
+    display: flex; /* Activa flexbox */
+    flex-wrap: nowrap; /* Evita que las secciones se envuelvan */
+    gap: 20px; /* Espacio entre las secciones */
+  }
+  
+  .col-8 {
+    flex: 2; /* Ocupa 2/3 del espacio disponible */
+  }
+  
+  .col-4 {
+    flex: 1; /* Ocupa 1/3 del espacio disponible */
+  }
+  
+  .flex-row {
+    display: flex;
+    gap: 15px; /* Espacio entre los checkboxes */
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los checkboxes con sus labels */
+    gap: 5px; /* Espacio entre el checkbox y su label */
+  }
+  
+  /* Estilo para el contenedor interno */
+  .panel-content {
+    max-width: 800px; /* Ajusta este valor según el ancho deseado */
+    width: 100%; /* Asegura que el contenedor no exceda el ancho máximo */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+  }
+  
+  /* Asegura que los elementos internos se ajusten correctamente */
+  .panel-content .form-container,
+  .panel-content .grid {
+    width: 100%; /* Asegura que los contenedores internos ocupen todo el ancho disponible */
+  }
+  /* Estilo para el panel */
+  ::ng-deep .custom-panel .p-panel {
+    
+    width: 63%; /* Asegura que el panel no exceda el ancho máximo */
+    margin: 0 auto; /* Centra el panel horizontalmente */
+  }
+  
+  ::ng-deep .custom-panel .p-panel .p-panel-content {
+    width: 100%; /* Asegura que el contenido interno ocupe todo el ancho del panel */
+  }
+  
+  ::ng-deep .custom-panel .p-panel .p-panel-header {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    text-align: center; /* Asegura que el texto esté centrado */
+    font-size: 1.2rem;
+  
+  }
+  
+  ::ng-deep .textarea-full2 {
+    width: 800px;
+  }
+  
+  @media (max-width: 768px) {
+    .text-container {
+      margin-bottom: 0.5rem; /* Menos espacio entre los elementos */
+    }
+  
+    /* Ocultar los divisores dentro del toolbar */
+    .toolbar p-divider {
+      display: none; /* Oculta los divisores dentro del toolbar */
+    }
+  
+    /* Ajustes para el textarea */
+    .textarea-full {
+      width: 100%; /* Asegura que el textarea ocupe todo el ancho disponible */
+      height: 180px; /* Reduce la altura */
+      resize: none;
+      padding: 0.5rem; /* Espacio dentro del textarea */
+    }
+  
+    /* Ajustes para los checkboxes */
+    .flex-row {
+      flex-direction: column; /* Coloca los elementos en una columna */
+      gap: 10px; /* Ajusta el espacio entre los elementos */
+    }
+  
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  
+    /* Ajustes para panel y formularios */
+    .panel-content, .form-container {
+      width: 100%; /* Asegura que los contenedores no excedan el ancho de la pantalla */
+      margin: 0 auto; /* Centra los contenedores */
+    }
+  
+    .grid {
+      flex-direction: column; /* Hace que las columnas se apilen en lugar de estar en fila */
+      gap: 20px; /* Ajusta el espacio entre las filas */
+    }
+  
+    .col-8, .col-4 {
+      flex: 1; /* Haz que todas las columnas ocupen el mismo espacio */
+      width: 100%; /* Asegura que las columnas ocupen todo el ancho disponible */
+    }
+  
+    /* Organizar inputs en columnas de 2 */
+    .form-container {
+      display: grid; /* Usamos grid para organizar los inputs */
+      grid-template-columns: 1fr 1fr; /* Define dos columnas */
+      gap: 20px; /* Espacio entre las columnas */
+    }
+  
+    .form-container .field {
+      width: 100%; /* Asegura que los campos ocupen todo el ancho de las celdas */
+    }
+  
+  
+    /* Ajustes de fuente para textos en pantallas pequeñas */
+    .textarea-full p {
+      font-size: 1rem; /* Ajusta el tamaño del texto */
+    }
+  
+  
+    /* Ajusta los float labels y calendarios */
+    p-floatlabel, p-calendar {
+      width: 100%;
+      max-width: 250px; /* Limita el tamaño máximo */
+    }
+  
+    /* Ajustes para ocultar los divisores */
+    p-divider {
+      height: 30px;
+      margin: 1rem 0;
+    }
+  
+    /* Asegura que los contenedores de formularios sean fluidos */
+    ::ng-deep .custom-panel .p-panel {
+      width: 100%; /* Asegura que el panel no exceda el ancho máximo */
+      margin: 0 auto; /* Centra el panel horizontalmente */
+    }
+  
+    ::ng-deep .custom-panel .p-panel .p-panel-content {
+      width: 100%; /* Asegura que el contenido interno ocupe todo el ancho del panel */
+    }
+  
+    ::ng-deep .custom-panel .p-panel .p-panel-header {
+      display: flex;
+      justify-content: center; /* Centra el contenido horizontalmente */
+      align-items: center; /* Centra el contenido verticalmente */
+      text-align: center;
+      font-size: 1.2rem;
+    }
+  
+    /* Ajustes adicionales para textarea */
+    ::ng-deep .textarea-full2 {
+      width: 100%; /* Asegura que el textarea ocupe todo el ancho disponible */
+    }
+  }
+  

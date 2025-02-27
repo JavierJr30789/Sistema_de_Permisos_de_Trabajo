@@ -7,16 +7,17 @@ import { CalendarModule } from 'primeng/calendar'; // Para p-calendar
 import { RadioButtonModule } from 'primeng/radiobutton'; // Para p-radioButton
 import { CheckboxModule } from 'primeng/checkbox'; // Para p-checkbox
 import { ButtonModule } from 'primeng/button'; // Para p-button
-//import { InputTextarea } from 'primeng/inputtextarea';  Para pInputTextarea
 import { FormsModule } from '@angular/forms';
 import { DividerModule } from 'primeng/divider';
 import { DatePickerModule } from 'primeng/datepicker';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { ToolbarComponent } from '../pt-caliente/toolbar/toolbar.component';
 
 @Component({
   selector: 'app-pt-frio',
   standalone: true,
-  imports: [FormsModule, CardModule,DatePickerModule ,ReactiveFormsModule, FieldsetModule, InputTextModule, CalendarModule, RadioButtonModule, CheckboxModule, ButtonModule, DividerModule],
+  imports: [FormsModule, CardModule,DatePickerModule ,RouterModule, ToolbarComponent,ReactiveFormsModule, FieldsetModule, InputTextModule, CalendarModule, RadioButtonModule, CheckboxModule, ButtonModule, DividerModule],
   templateUrl: './pt-frio.component.html',
   styleUrl: './pt-frio.component.css'
 })

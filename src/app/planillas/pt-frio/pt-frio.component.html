@@ -1,21 +1,5 @@
 <a href="/planillas"><p-button icon="pi pi-times" [rounded]="true" [text]="true" [raised]="true" severity="danger" />
 </a>  
-<div class="toolbar">
-    <div class="toolbar-item">
-      <img src="https://cdn.freelogovectors.net/wp-content/uploads/2020/09/phoenix-global-resources-logo.png" 
-           alt="Mi Logo" width="250" height="auto">
-    </div>
-    <p-divider layout="vertical"></p-divider>
-    <div class="toolbar-item">
-      <h1>Permiso de Trabajo en Frio</h1>
-    </div>
-    <p-divider layout="vertical"></p-divider>
-    <div class="toolbar-item">
-      <div class="text-container">
-        <p>FO PO-HSE-002B</p>
-        <p>Revision: 4</p>
-        <p-calendar [(ngModel)]="fecha" [showIcon]="true" [showTime]="true" dateFormat="dd/mm/yy"></p-calendar>
-      </div>
-    </div>
-  
+<div class="cabeza">
+  <app-toolbar></app-toolbar>
     </div>

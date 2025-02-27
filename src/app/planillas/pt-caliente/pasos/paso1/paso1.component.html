@@ -1,0 +1,115 @@
+
+
+<p-panel header="Especificaciones del trabajo" class="custom-panel">
+    <!-- Contenedor interno para limitar el ancho -->
+    <div class="panel-content">
+      <!-- Primera Sección -->
+      <div class="flex-container">
+        <!-- Contenedor principal con las tres secciones alineadas -->
+        <div class="form-container">
+          <!-- Sección 1: Ubicación -->
+          <div class="section">
+            <p-floatlabel>
+              <input id="yacimiento" type="text" pInputText [(ngModel)]="form.yacimiento" />
+              <label for="yacimiento">Yacimiento</label>
+            </p-floatlabel>
+            <p-floatlabel>
+              <input id="area" type="text" pInputText [(ngModel)]="form.area" />
+              <label for="area">Área</label>
+            </p-floatlabel>
+            <p-floatlabel>
+              <input id="lugar" type="text" pInputText [(ngModel)]="form.lugar" />
+              <label for="lugar">Lugar</label>
+            </p-floatlabel>
+          </div>
+  
+          <!-- Sección 2: Equipo a ser intervenido -->
+          <div class="section">
+            <p-floatlabel>
+              <textarea pTextarea id="equipo" [(ngModel)]="form.equipo" rows="5" class="textarea-full"></textarea>
+              <label for="equipo">Equipo a ser intervenido:</label>
+            </p-floatlabel>
+          </div>
+  
+          <!-- Sección 3: Fechas y Horas -->
+          <div class="section">
+            <p-floatlabel>
+              <p-datepicker inputId="fechaInicio" [(ngModel)]="form.fechaInicio" [showTime]="true" [hourFormat]="'24'"></p-datepicker>
+              <label for="fechaInicio">Fecha y Hora de inicio</label>
+            </p-floatlabel>
+            <p-floatlabel>
+              <p-datepicker inputId="fechaTermino" [(ngModel)]="form.fechaTermino" [showTime]="true" [hourFormat]="'24'"></p-datepicker>
+              <label for="fechaTermino">Fecha y Hora estimada de término</label>
+            </p-floatlabel>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Divider -->
+      <p-divider></p-divider>
+  
+      <!-- Otras secciones (checkboxes, descripción, firmas, etc.) -->
+      <div class="grid p-fluid">
+        <!-- Primera sección: Tipo de trabajo en caliente -->
+        <div class="col-8 field">
+          <label>Tipo de trabajo en caliente:</label>
+          <div class="flex-row">
+            <div class="checkbox-group">
+              <p-checkbox id="fuenteIgnicion" [(ngModel)]="form.fuenteIgnicion" binary="true"></p-checkbox>
+              <label for="fuenteIgnicion">Con fuente ignición</label>
+            </div>
+            <div class="checkbox-group">
+              <p-checkbox id="atmosferaExplosiva" [(ngModel)]="form.atmosferaExplosiva" binary="true"></p-checkbox>
+              <label for="atmosferaExplosiva">Con atmósfera explosiva/Área clasificada</label>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Segunda sección: Observador de fuego -->
+        <div class="col-4 field">
+          <p-floatlabel>
+            <input id="observador" type="text" pInputText [(ngModel)]="form.observadorFuego" />
+            <label for="observador">Observador de fuego</label>
+          </p-floatlabel>
+        </div>
+      </div>
+  
+      <!-- Divider -->
+      <p-divider></p-divider>
+  
+      <!-- Descripción del trabajo -->
+      <div class="grid">
+        <div class="col-12 field">
+          <p-floatlabel>
+            <textarea pTextarea id="descripcion" [(ngModel)]="form.descripcion" rows="5" class="textarea-full2"></textarea>
+            <label for="descripcion">Descripción del trabajo</label>
+          </p-floatlabel>
+        </div>
+      </div>
+  
+      <!-- Divider -->
+      <p-divider></p-divider>
+  
+      <!-- Firmas -->
+      <div class="grid">
+        <div class="col-4 field">
+          <p-floatlabel>
+            <input type="text" pInputText [(ngModel)]="form.firmaSolicitante" />
+            <label>Firma del solicitante</label>
+          </p-floatlabel>
+        </div>
+        <div class="col-4 field">
+          <p-floatlabel>
+            <input type="text" pInputText [(ngModel)]="form.nombreApellido" />
+            <label>Nombre y apellido</label>
+          </p-floatlabel>
+        </div>
+        <div class="col-4 field">
+          <p-floatlabel>
+            <input type="text" pInputText [(ngModel)]="form.dni" />
+            <label>DNI</label>
+          </p-floatlabel>
+        </div>
+      </div>
+    </div>
+  </p-panel>

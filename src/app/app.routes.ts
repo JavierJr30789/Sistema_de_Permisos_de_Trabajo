@@ -9,6 +9,7 @@ export const routes: Routes = [
       ),
     title: 'Sistema de Permisos de Trabajo',
   },
+
   {
     path: 'planillas',
     loadComponent: () =>
@@ -17,6 +18,7 @@ export const routes: Routes = [
       ),
     title: 'nueva planilla',
   },
+
   {
     path: 'planillas-existentes',
     loadComponent: () =>
@@ -25,6 +27,7 @@ export const routes: Routes = [
       ),
     title: 'planillas existentes',
   },
+
   {
     path: 'pt-caliente',
     loadComponent: () =>
@@ -33,6 +36,7 @@ export const routes: Routes = [
       ),
     title: 'Permiso de trabajo en Caliente',
   },
+
   {
     path: 'pt-frio',
     loadComponent: () =>
@@ -41,4 +45,67 @@ export const routes: Routes = [
       ),
     title: 'Permiso de trabajo en Frio',
   },
+
+  {
+    path:'toolbar',
+    loadComponent: () =>
+      import('./planillas/pt-caliente/toolbar/toolbar.component').then(
+        (m) => m.ToolbarComponent
+      ),
+    title: 'toolbar'
+  },
+
+{
+  path:'paso1',
+loadComponent: () =>
+  import('./planillas/pt-caliente/pasos/paso1/paso1.component').then(
+    (m) => m.Paso1Component
+  ),
+title: 'paso1'
+},
+
+{
+  path:'paso2',
+loadComponent: () =>
+  import('./planillas/pt-caliente/pasos/paso2/paso2.component').then(
+    (m) => m.Paso2Component
+  ),
+title: 'paso2'
+},
+
+{
+  path:'paso3',
+loadComponent: () =>
+  import('./planillas/pt-caliente/pasos/paso3/paso3.component').then(
+    (m) => m.Paso3Component
+  ),
+title: 'paso3'
+},
+
+{
+  path:'paso4',
+loadComponent: () =>
+  import('./planillas/pt-caliente/pasos/paso4/paso4.component').then(
+    (m) => m.Paso4Component
+  ),
+title: 'paso4'
+},
+
+{
+path:'paso5',
+loadComponent: () =>
+  import('./planillas/pt-caliente/pasos/paso5/paso5.component').then(
+    (m) => m.Paso5Component
+  ),
+title: 'paso5'
+},
+
+{
+path:'paso6',
+loadComponent: () =>
+  import('./planillas/pt-caliente/pasos/paso6/paso6.component').then(
+    (m) => m.Paso6Component
+  ),
+title: 'paso6'}
+
 ];
