@@ -113,3 +113,25 @@
       </div>
     </div>
   </p-panel>
+
+  <div class="btn-accion">
+    <p-button
+    icon="pi pi-bookmark"
+      label="Guardar"
+      variant="text"
+      [raised]="true"
+      severity="secondary"
+      class="btn-left"
+    />
+    
+    <a routerLink="/paso2" >
+    <p-button
+    icon="pi pi-check"
+      label="Siguiente Paso"
+      variant="text"
+      [raised]="true"
+      severity="primary"
+      class="btn-right"
+      />
+      </a>
+  </div>

@@ -226,3 +226,33 @@ p-divider {
     }
   }
   
+
+  /* Contenedor de los botones */
+::ng-deep .btn-accion {
+  display: flex;
+  justify-content: space-between; /* Espacia los botones uno al principio y el otro al final */
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+  padding: 10px;
+}
+
+/* Tamaño de los botones */
+::ng-deep .btn-accion p-button {
+  font-size: 1.2rem; /* Ajusta el tamaño del texto en el botón */
+  padding: 0.5rem 1rem; /* Ajusta el relleno dentro del botón */
+  min-width: 120px; /* Ajusta el ancho mínimo del botón */
+  
+}
+
+::ng-deep .btn-right .p-button {
+  font-size: 1.5rem !important;
+  padding: 1rem 2rem !important;
+  min-width: 150px !important;
+  height: 50px !important;
+}
+
+::ng-deep .btn-left .p-button {
+  font-size: 1.5rem !important;
+  padding: 1rem 2rem !important;
+  min-width: 150px !important;
+  height: 50px !important;
+}
