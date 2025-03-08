@@ -1,12 +1,19 @@
 
 
-<p-panel header="Especificaciones del trabajo" class="custom-panel">
+<p-panel header="Este permiso es valido solamente para el dia en el que se efectua el trabajo debera ser revalidado en caso de extension de jornada" class="custom-panel">
     <!-- Contenedor interno para limitar el ancho -->
     <div class="panel-content">
+      
+      <p-floatlabel>
+        <textarea pTextarea id="descripcion" [(ngModel)]="form.descripcion" rows="5" class="textarea-full2"></textarea>
+        <label for="descripcion">Especificaciones del trabajo </label>
+      </p-floatlabel>
       <!-- Primera Sección -->
       <div class="flex-container">
         <!-- Contenedor principal con las tres secciones alineadas -->
+         
         <div class="form-container">
+          
           <!-- Sección 1: Ubicación -->
           <div class="section">
             <p-floatlabel>

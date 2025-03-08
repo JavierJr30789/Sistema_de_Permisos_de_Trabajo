@@ -1,36 +1,69 @@
-<p>paso2 works!</p>
+<p>paso2 work</p>
+<p-card>
+  <h3>Peligros y Certificados Asociados (tildar lo que aplique)</h3>
+  <div class="form-container">
+    <div *ngFor="let item of peligros; let last = last" class="form-row">
+      <!-- Checkbox -->
+      <div class="form-item">
+        <p-checkbox [(ngModel)]="item.checked" [binary]="true"></p-checkbox>
+        <!-- Texto de la opción -->
+        <span class="label-text">{{ item.label }}</span>
+      </div>
+  
+      <!-- ✅ Input para subir el certificado -->
+      <div *ngIf="item.cert" class="form-item">
+        <p-fileUpload 
+          mode="basic" 
+          [chooseLabel]="'Subir Certificado'" 
+          [customUpload]="true" 
+          (onSelect)="onFileSelect($event, item)">
+        </p-fileUpload>
+      </div>
+      <p-divider *ngIf="!last"></p-divider> 
+    </div>
+  
+    <div class="observaciones">
+      <label>Observaciones:</label>
+      <textarea pInputTextarea [(ngModel)]="observaciones"></textarea>
+    </div>
+  </div>
+</p-card>
 
 <div class="btn-accion">
-  
-  <a routerLink="/pt-caliente" >
-    <p-button
-    icon="pi pi-arrow-left"
-      label="Volver atras"
-      variant="text"
-      [raised]="true"
-      severity="warn"
-      class="btn-right"
-      />
-      </a>  
-  
+  <!-- Botón Guardar (arriba) -->
   <p-button
     icon="pi pi-bookmark"
-      label="Guardar"
-      variant="text"
-      [raised]="true"
-      severity="secondary"
-      class="btn-left"
-    />
-    
+    label="Guardar"
+    variant="text"
+    [raised]="true"
+    severity="secondary"
+    class="btn-center"
+  />
 
-    <a routerLink="/paso3" >
-    <p-button
-    icon="pi pi-arrow-right"
-      label="Siguiente Paso"
-      variant="text"
-      [raised]="true"
-      severity="info"
-      class="btn-right"
+  <!-- Contenedor para los botones de navegación (Volver atrás y Siguiente Paso) -->
+  <div class="btn-navigation">
+    <!-- Botón Volver atrás -->
+    <a routerLink="/pt-caliente">
+      <p-button
+        icon="pi pi-arrow-left"
+        label="Volver atrás"
+        variant="text"
+        [raised]="true"
+        severity="warn"
+        class="btn-left"
       />
-      </a>
+    </a>
+
+    <!-- Botón Siguiente Paso -->
+    <a routerLink="/paso3">
+      <p-button
+        icon="pi pi-arrow-right"
+        label="Siguiente Paso"
+        variant="text"
+        [raised]="true"
+        severity="info"
+        class="btn-right"
+      />
+    </a>
   </div>
+</div>

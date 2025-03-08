@@ -124,6 +124,7 @@ p-divider {
   
   ::ng-deep .textarea-full2 {
     width: 800px;
+    margin-bottom: 10px;
   }
   
   @media (max-width: 768px) {
