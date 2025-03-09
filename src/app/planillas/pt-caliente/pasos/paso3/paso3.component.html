@@ -1,26 +1,52 @@
 <p>paso3 works!</p>
 
-<p-card>
-  <h3>Requisitos Específicos para Trabajo en Caliente (tildar lo que aplique)</h3>
-  <div class="form-container grid-container"> <!-- Agregamos la clase grid-container -->
-    <div *ngFor="let item of requisitos" class="form-row">
-      <div class="form-item">
-        <p-checkbox [(ngModel)]="item.checked" [binary]="true"></p-checkbox>
-        <span class="label-text">{{ item.label }}</span>
+<div class="cards-container">
+  <!-- Card 1: Requisitos para Trabajo en Caliente -->
+  <p-card>
+    <h3>Requisitos Específicos para Trabajo en Caliente (tildar lo que aplique)</h3>
+    <div class="form-container grid-container"> <!-- Aplicar la clase grid-container -->
+      <div *ngFor="let item of requisitos; let i = index; let last = last" class="form-row">
+        <div class="form-item">
+          <p-checkbox [(ngModel)]="item.checked" [binary]="true"></p-checkbox>
+          <span class="label-text">{{ item.label }}</span>
+        </div>
+        <!-- Mostrar textarea solo si es la opción "Otros" y está seleccionada -->
+        <div *ngIf="item.label === 'Otros' && item.checked" class="form-item">
+          <textarea
+            [(ngModel)]="item.text"
+            placeholder="Especificar otros requisitos..."
+            rows="3"
+          ></textarea>
+        </div>
+        <!-- Agregar p-divider después de cada tercer elemento, excepto el último -->
+        <p-divider *ngIf="(i + 1) % 3 === 0 && !last"></p-divider>
       </div>
-
-       <!-- Mostrar textarea solo si es la opción "Otros" y está seleccionada -->
-       <div *ngIf="item.label === 'Otros' && item.checked" class="form-item">
-        <textarea
-          [(ngModel)]="item.text"
-          placeholder="Especificar otros requisitos..."
-          rows="3"
-        ></textarea>
-      </div>
-      
     </div>
-  </div>
-</p-card>
+  </p-card>
+
+  <!-- Card 2: Nueva card (puedes duplicar la estructura de la primera) -->
+  <p-card>
+    <h3>Requisitos específicos para trabajo en caliente (tildar lo que aplique y complentar con N/A lo que no aplica) </h3>
+    <div class="form-container grid-container"> <!-- Aplicar la clase grid-container -->
+      <div *ngFor="let item of equiposProteccion; let i = index; let last = last" class="form-row">
+        <div class="form-item">
+          <p-checkbox [(ngModel)]="item.checked" [binary]="true"></p-checkbox>
+          <span class="label-text">{{ item.label }}</span>
+        </div>
+        <!-- Mostrar textarea solo si es la opción "Otros" y está seleccionada -->
+        <div *ngIf="item.label === 'Otros' && item.checked" class="form-item">
+          <textarea
+            [(ngModel)]="item.text"
+            placeholder="Especificar otros requisitos..."
+            rows="3"
+          ></textarea>
+        </div>
+        <!-- Agregar p-divider después de cada tercer elemento, excepto el último -->
+        <p-divider *ngIf="(i + 1) % 3 === 0 && !last"></p-divider>
+      </div>
+    </div>
+  </p-card>
+</div>
 
 <div class="btn-navigation">
   <!-- Botón Volver atrás -->

@@ -34,12 +34,31 @@ export class Paso3Component {
     { label: 'Despresurizar', checked: false },
     { label: 'Definir observador de fuego (permanente)', checked: false },
     { label: 'Usar iluminación de 12-24 V', checked: false },
-    
+
     { label: 'Plaquear equipo', checked: false },
     { label: 'Usar iluminación antiexplosiva', checked: false },
     { label: 'Chequear EPS específico para trabajo en caliente', checked: false },
     { label: 'Otros', checked: false, text: '' } 
     
+  ];
+
+  // Nueva lista de checkboxes para la segunda card
+  equiposProteccion = [
+    { label: 'Casco', checked: false },
+    { label: 'Antiparras', checked: false },
+    { label: 'Delantal de soldador', checked: false },
+    { label: 'Botas especiales', checked: false },
+    { label: 'Botines', checked: false },
+    { label: 'Anteojos', checked: false },
+    { label: 'Polainas', checked: false },
+    { label: 'Guantes de soldador', checked: false },
+    { label: 'Protector facial de Soldadura', checked: false },
+    { label: 'Mangas', checked: false },
+    { label: 'Protección auditiva', checked: false },
+    { label: 'Protección respiratoria Tipo:', checked: false },
+    { label: 'Sensor multigas', checked: false },
+    { label: 'Equipo de resp. autónomo', checked: false },
+    { label: 'Otros (especificar):', checked: false, text: '' }
   ];
 
 }
