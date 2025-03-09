@@ -29,41 +29,40 @@
   </div>
 </p-card>
 
-<div class="btn-accion">
-  <!-- Botón Guardar (arriba) -->
-  <p-button
-    icon="pi pi-bookmark"
-    label="Guardar"
-    variant="text"
-    [raised]="true"
-    severity="secondary"
-    class="btn-center"
-  />
+<div class="btn-navigation">
+  <!-- Botón Volver atrás -->
+  <a routerLink="/pt-caliente">
+    <p-button
+      icon="pi pi-arrow-left"
+      label="Volver atrás"
+      variant="text"
+      [raised]="true"
+      severity="warn"
+      class="btn-left"
+    />
+  </a>
 
-  <!-- Contenedor para los botones de navegación (Volver atrás y Siguiente Paso) -->
-  <div class="btn-navigation">
-    <!-- Botón Volver atrás -->
-    <a routerLink="/pt-caliente">
-      <p-button
-        icon="pi pi-arrow-left"
-        label="Volver atrás"
-        variant="text"
-        [raised]="true"
-        severity="warn"
-        class="btn-left"
-      />
-    </a>
+  <!-- Botón adicional (si lo necesitas) -->
+  <a routerLink="/otro-paso">
+    <p-button
+      icon="pi pi-bookmark"
+      label="Guardar"
+      variant="text"
+      [raised]="true"
+      severity="secondary"
+      class="btn-center"
+    />
+  </a>
 
-    <!-- Botón Siguiente Paso -->
-    <a routerLink="/paso3">
-      <p-button
-        icon="pi pi-arrow-right"
-        label="Siguiente Paso"
-        variant="text"
-        [raised]="true"
-        severity="info"
-        class="btn-right"
-      />
-    </a>
-  </div>
+  <!-- Botón Siguiente Paso -->
+  <a routerLink="/paso3">
+    <p-button
+      icon="pi pi-arrow-right"
+      label="Siguiente Paso"
+      variant="text"
+      [raised]="true"
+      severity="info"
+      class="btn-right"
+    />
+  </a>
 </div>

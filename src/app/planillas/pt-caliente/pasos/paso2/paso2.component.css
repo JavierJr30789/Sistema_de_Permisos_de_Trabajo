@@ -1,74 +1,29 @@
-/* Contenedor de los botones */
-::ng-deep .btn-accion {
+.btn-navigation {
   display: flex;
-  flex-direction: column; /* Cambia la dirección a columna para apilar los botones verticalmente */
-  align-items: center; /* Centra los botones horizontalmente */
-  gap: 10px; /* Espaciado entre los botones */
-  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px; /* Espacio predeterminado entre botones */
   padding: 10px;
-  box-sizing: border-box;
 }
 
-/* Contenedor para los botones de navegación (Volver atrás y Siguiente Paso) */
-::ng-deep .btn-navigation {
-  display: flex;
-  justify-content: space-between; /* Espacia los botones de navegación */
-  width: 100%; /* Ocupa todo el ancho disponible */
-  gap: 10px; /* Espaciado entre los botones */
-}
-
-/* Estilo base para los botones */
-::ng-deep .btn-accion p-button {
-  font-size: 1.5rem; /* Aumenta el tamaño de la fuente para PC */
-  padding: 1rem 2rem; /* Aumenta el padding para PC */
-  min-width: 200px; /* Aumenta el ancho mínimo para PC */
+.btn-navigation a {
+  flex: 1;
+  min-width: fit-content;
   text-align: center;
+  margin: 0; /* Elimina márgenes */
+  padding: 0; /* Elimina paddings */
 }
 
-/* Estilos para los botones de navegación (Volver atrás y Siguiente Paso) */
-::ng-deep .btn-left, .btn-right {
-  font-size: 1.8rem; /* Aumenta el tamaño de la fuente para PC */
-  padding: 1.5rem 3rem; /* Aumenta el padding para PC */
-  height: 70px; /* Aumenta la altura para PC */
-  flex: 1; /* Hace que los botones ocupen el espacio disponible */
-}
-
-/* Estilos para el botón central (Guardar) */
-::ng-deep .btn-center {
-  font-size: 1.8rem; /* Aumenta el tamaño de la fuente para PC */
-  padding: 1.5rem 3rem; /* Aumenta el padding para PC */
-  min-width: 250px; /* Aumenta el ancho mínimo para PC */
-  height: 70px; /* Aumenta la altura para PC */
-  width: 100%; /* Ocupa todo el ancho disponible */
-}
-
-/* Media Query para pantallas pequeñas (móviles) */
+/* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
-  ::ng-deep .btn-accion {
-    gap: 10px;
+  .btn-navigation {
+    gap: 10px; /* Reduce el espacio entre botones en móviles */
+    padding: 5px;
   }
 
-  ::ng-deep .btn-accion p-button {
-    min-width: 45%;
-    font-size: 1rem; /* Tamaño de fuente más pequeño para móviles */
-    padding: 0.8rem; /* Padding más pequeño para móviles */
-  }
-
-  ::ng-deep .btn-left, .btn-right {
-    min-width: 45%;
-    margin-bottom: 10px;
-    font-size: 1.2rem; /* Tamaño de fuente más pequeño para móviles */
-    padding: 1rem 2rem; /* Padding más pequeño para móviles */
-    height: 50px; /* Altura más pequeña para móviles */
-  }
-
-  ::ng-deep .btn-center {
-    font-size: 1.2rem; /* Tamaño de fuente más pequeño para móviles */
-    padding: 1rem 2rem; /* Padding más pequeño para móviles */
-    min-width: 150px; /* Ancho mínimo más pequeño para móviles */
-    height: 50px; /* Altura más pequeña para móviles */
-  }
 }
+
 
   .form-container {
     display: flex;
