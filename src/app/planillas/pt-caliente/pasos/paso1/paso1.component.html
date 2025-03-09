@@ -120,25 +120,30 @@
       </div>
     </div>
   </p-panel>
-
-  <div class="btn-accion">
-    <p-button
-    icon="pi pi-bookmark"
-      label="Guardar"
-      variant="text"
-      [raised]="true"
-      severity="secondary"
-      class="btn-left"
-    />
-    
-    <a routerLink="/paso2" >
-    <p-button
-    icon="pi pi-check"
-      label="Siguiente Paso"
-      variant="text"
-      [raised]="true"
-      severity="primary"
-      class="btn-right"
+  <div class="btn-navigation">
+    <!-- Botón Volver atrás -->
+   
+    <!-- Botón adicional (si lo necesitas) -->
+    <a routerLink="/otro-paso">
+      <p-button
+        icon="pi pi-bookmark"
+        label="Guardar"
+        variant="text"
+        [raised]="true"
+        severity="secondary"
+        class="btn-center"
       />
-      </a>
+    </a>
+  
+    <!-- Botón Siguiente Paso -->
+    <a routerLink="/paso2">
+      <p-button
+        icon="pi pi-arrow-right"
+        label="Siguiente Paso"
+        variant="text"
+        [raised]="true"
+        severity="info"
+        class="btn-right"
+      />
+    </a>
   </div>

@@ -1,26 +1,29 @@
 <p>paso6 works!</p>
-<div class="btn-accion">
-
-    <a routerLink="/paso5" >
-        <p-button
-        icon="pi pi-arrow-left"
-          label="Volver atras"
-          variant="text"
-          [raised]="true"
-          severity="warn"
-          class="btn-right"
-          />
-          </a>
-
+<div class="btn-navigation">
+  <!-- Botón Volver atrás -->
+  <a routerLink="/paso5">
     <p-button
-    icon="pi pi-bookmark"
+      icon="pi pi-arrow-left"
+      label="Volver atrás"
+      variant="text"
+      [raised]="true"
+      severity="warn"
+      class="btn-left"
+    />
+  </a>
+
+  <!-- Botón adicional (si lo necesitas) -->
+  <a routerLink="/otro-paso">
+    <p-button
+      icon="pi pi-bookmark"
       label="Guardar"
       variant="text"
       [raised]="true"
       severity="secondary"
-      class="btn-left"
+      class="btn-center"
     />
-
+  </a>
+<a routerLink="">
     <p-button
     icon="pi pi-check"
       label="Finalizar"
@@ -29,6 +32,6 @@
       severity="primary"
       class="btn-right"
       />
-
+    </a>
   
     </div>

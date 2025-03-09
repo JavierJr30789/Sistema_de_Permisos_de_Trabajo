@@ -1,29 +1,23 @@
-  /* Contenedor de los botones */
-  ::ng-deep .btn-accion {
-    display: flex;
-    justify-content: space-between; /* Espacia los botones uno al principio y el otro al final */
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
-    padding: 10px;
+.btn-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px; /* Espacio predeterminado entre botones */
+  padding: 10px;
+}
+
+.btn-navigation a {
+  flex: 1;
+  text-align: center;
+
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .btn-navigation {
+    gap: 8px; /* Reduce el espacio entre botones en móviles */
+    padding: 4px;
   }
-  
-  /* Tamaño de los botones */
-  ::ng-deep .btn-accion p-button {
-    font-size: 1.2rem; /* Ajusta el tamaño del texto en el botón */
-    padding: 0.5rem 1rem; /* Ajusta el relleno dentro del botón */
-    min-width: 120px; /* Ajusta el ancho mínimo del botón */
-    
-  }
-  
-  ::ng-deep .btn-right .p-button {
-    font-size: 1.5rem !important;
-    padding: 1rem 2rem !important;
-    min-width: 150px !important;
-    height: 50px !important;
-  }
-  
-  ::ng-deep .btn-left .p-button {
-    font-size: 1.5rem !important;
-    padding: 1rem 2rem !important;
-    min-width: 150px !important;
-    height: 50px !important;
-  }
+
+}

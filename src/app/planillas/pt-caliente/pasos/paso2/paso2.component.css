@@ -9,17 +9,15 @@
 
 .btn-navigation a {
   flex: 1;
-  min-width: fit-content;
   text-align: center;
-  margin: 0; /* Elimina márgenes */
-  padding: 0; /* Elimina paddings */
+
 }
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
   .btn-navigation {
-    gap: 10px; /* Reduce el espacio entre botones en móviles */
-    padding: 5px;
+    gap: 8px; /* Reduce el espacio entre botones en móviles */
+    padding: 4px;
   }
 
 }
