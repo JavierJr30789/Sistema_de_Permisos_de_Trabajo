@@ -13,12 +13,29 @@
 
 }
 
+
+/* Aplica estos estilos solo en pantallas mayores a 1200px */
+@media (min-width: 1200px) {
+  ::ng-deep .p-card-body {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  ::ng-deep .p-card {
+    width: 63%;
+    margin: 0 auto;
+  }
+}
+
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
   .btn-navigation {
     gap: 8px; /* Reduce el espacio entre botones en móviles */
     padding: 4px;
   }
+  
+
 
 }
 
@@ -28,6 +45,8 @@
     flex-direction: column;
   }
   
+  
+
   .form-row {
     display: flex;
     flex-direction: column; /* Cambio para que el p-divider esté debajo */

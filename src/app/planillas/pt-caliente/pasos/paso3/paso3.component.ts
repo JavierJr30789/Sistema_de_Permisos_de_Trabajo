@@ -1,30 +1,45 @@
 import { Component } from '@angular/core';
 // Importaciones de PrimeNG
 import { CardModule } from 'primeng/card'; // Para p-card
-import { FieldsetModule } from 'primeng/fieldset'; // Para p-fieldset
-import { InputTextModule } from 'primeng/inputtext'; // Para pInputText
-import { CalendarModule } from 'primeng/calendar'; // Para p-calendar
-import { RadioButtonModule } from 'primeng/radiobutton'; // Para p-radioButton
 import { CheckboxModule } from 'primeng/checkbox'; // Para p-checkbox
-import { ButtonModule } from 'primeng/button'; // Para p-button
-//import { InputTextarea } from 'primeng/inputtextarea';  Para pInputTextarea
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DividerModule } from 'primeng/divider';
-import { DatePickerModule } from 'primeng/datepicker';
-import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { ButtonModule } from 'primeng/button';
 import { RouterModule } from '@angular/router';
-import { PanelModule } from 'primeng/panel';
-import { FloatLabelModule } from 'primeng/floatlabel';
-
-
 
 @Component({
   selector: 'app-paso3',
-   standalone: true,
-    imports: [FormsModule, CardModule,DatePickerModule,PanelModule, FloatLabelModule ,ReactiveFormsModule,RouterModule, FieldsetModule, InputTextModule, CalendarModule, RadioButtonModule, CheckboxModule, ButtonModule, DividerModule],
+  standalone: true,
+  imports: [CommonModule, FormsModule,ReactiveFormsModule, CardModule, CheckboxModule, DividerModule, ButtonModule, RouterModule],
   templateUrl: './paso3.component.html',
-  styleUrl: './paso3.component.css'
+  styleUrls: ['./paso3.component.css']
 })
 export class Paso3Component {
+
+  requisitos = [
+    { label: 'Obtener autorización del responsable por la instalación', checked: false },
+    { label: 'Ventilar', checked: false },
+    { label: 'Revisar que los controles identificados en la evaluación de riesgo operacional estén implementados', checked: false },
+
+    { label: 'Realizar medición de gases (registrar en formulario de medición de gases)', checked: false },
+    { label: 'Revisar equipos y herramientas', checked: false },
+    { label: 'Contar con supervisor de SSMA permanente', checked: false },
+      
+    { label: 'Inertizar', checked: false },
+    { label: 'Aislar (instalar barrera) y señalizar área de trabajo', checked: false },
+    { label: 'Remover o cubrir con material ignífugo, cualquier material inflamable/combustible en un radio de 11 metros', checked: false },
+    
+
+    { label: 'Despresurizar', checked: false },
+    { label: 'Definir observador de fuego (permanente)', checked: false },
+    { label: 'Usar iluminación de 12-24 V', checked: false },
+    
+    { label: 'Plaquear equipo', checked: false },
+    { label: 'Usar iluminación antiexplosiva', checked: false },
+    { label: 'Chequear EPS específico para trabajo en caliente', checked: false },
+    { label: 'Otros', checked: false, text: '' } 
+    
+  ];
 
 }

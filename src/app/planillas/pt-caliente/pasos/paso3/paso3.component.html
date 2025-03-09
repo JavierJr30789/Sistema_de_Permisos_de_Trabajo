@@ -1,5 +1,27 @@
 <p>paso3 works!</p>
 
+<p-card>
+  <h3>Requisitos Específicos para Trabajo en Caliente (tildar lo que aplique)</h3>
+  <div class="form-container grid-container"> <!-- Agregamos la clase grid-container -->
+    <div *ngFor="let item of requisitos" class="form-row">
+      <div class="form-item">
+        <p-checkbox [(ngModel)]="item.checked" [binary]="true"></p-checkbox>
+        <span class="label-text">{{ item.label }}</span>
+      </div>
+
+       <!-- Mostrar textarea solo si es la opción "Otros" y está seleccionada -->
+       <div *ngIf="item.label === 'Otros' && item.checked" class="form-item">
+        <textarea
+          [(ngModel)]="item.text"
+          placeholder="Especificar otros requisitos..."
+          rows="3"
+        ></textarea>
+      </div>
+      
+    </div>
+  </div>
+</p-card>
+
 <div class="btn-navigation">
   <!-- Botón Volver atrás -->
   <a routerLink="/paso2">
